@@ -6,6 +6,7 @@ const Colors = {
   pillActiveColor: "#ff5c62",
   pillInactiveColor: "#f5f6f8",
   sliderBackgroundColor: "#ececec",
+  sliderBorderColor: "#ffffff",
 };
   
 export { Colors };

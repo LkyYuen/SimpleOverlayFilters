@@ -1,4 +1,5 @@
 const Strings = {
+  openModal: "Open Modal",
   filters: "Filters",
   workoutType: "WORKOUT TYPE",
   cardio: "Cardio",
@@ -12,6 +13,7 @@ const Strings = {
   back: "Back",
   legs: "Legs",
   timeFrame: "TIME FRAME",
+  mins: "mins",
   workoutLevel: "WORKOUT LEVEL",
   beginner: "Beginner",
   intermediate: "Intermediate",

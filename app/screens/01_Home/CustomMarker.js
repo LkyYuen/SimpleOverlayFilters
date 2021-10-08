@@ -1,38 +1,36 @@
 import React from 'react';
-import { StyleSheet, View, Text } from 'react-native';
+import { View } from 'react-native';
+import { Colors } from "../../constants"
+import { Shadow } from 'react-native-shadow-2';
 
-class CustomMarker extends React.Component {
-  render() {
-    return (
+const CustomMarker = props => {
+  return (
+    <Shadow
+      startColor={props.pressed ? 'rgba(0,0,0,0.13)' : 'transparent'}
+      distance={props.pressed ? 5 : 0}
+    >
+      <View
+        style={{ 
+          width: 30,
+          height: 30,
+          borderRadius: 30/2,
+          backgroundColor: Colors.sliderBorderColor,
+          justifyContent: 'center',
+          alignItems: 'center'
+        }}
+      >
         <View
-            style={{ 
-                width: 30,
-                height: 30,
-                borderRadius: 30/2,
-                backgroundColor: 'green',
-                justifyContent: 'center',
-                alignItems: 'center'
-            }}
-        >
-            <View
-                style={{ 
-                    width: 25,
-                    height: 25,
-                    borderRadius: 30/2,
-                    backgroundColor: 'red',
-                    alignSelf: 'center',
-                }}
-            />
-        </View>
-    );
-  }
+          style={{ 
+            width: 25,
+            height: 25,
+            borderRadius: 50/2,
+            backgroundColor: Colors.pillActiveColor,
+            alignSelf: 'center',
+          }}
+        />
+      </View>
+    </Shadow>
+  );
 }
-
-const styles = StyleSheet.create({
-  image: {
-    height: 2,
-    width: 40,
-  },
-});
 
 export default CustomMarker;
